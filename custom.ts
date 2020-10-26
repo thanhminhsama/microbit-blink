@@ -4,13 +4,30 @@
  * Read more at https://makecode.microbit.org/blocks/custom
  */
 
-enum MyEnum {
-    //% block="one"
+enum MyEnum1 {
+    //% block="1"
+    Zero,
+    //% block="2"
     One,
-    //% block="two"
-    Two
+    //% block="3"
+    Two,
+    //% block="4"
+    Three,
+    //% block="5"
+    Four,
 }
-
+enum MyEnum2 {
+    //% block="1"
+    Zero,
+    //% block="2"
+    One,
+    //% block="3"
+    Two,
+    //% block="4"
+    Three,
+    //% block="5"
+    Four,
+}
 /**
  * Custom blocks
  */
@@ -23,7 +40,7 @@ namespace animations {
      * @param e describe parameter here
      */
     //% block="blink x $x y $y every $interval ms"
-    export function blink(x: number, y: number, interval: number): void {
+    export function blink(x: MyEnum1, y: MyEnum1, interval: number): void {
         // Add code here
         let sprite = game.createSprite(x, y)
         sprite.setBlink(interval)
