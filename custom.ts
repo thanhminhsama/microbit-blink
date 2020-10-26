@@ -14,7 +14,7 @@ enum MyEnum {
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon=""
+//% weight=100 color=#0fbc10 icon=""
 namespace animations {
     /**
      * TODO: describe your function here
@@ -22,17 +22,11 @@ namespace animations {
      * @param s describe parameter here, eg: "Hello"
      * @param e describe parameter here
      */
-    //% block="blink $n $s $e"
+    //% block="blink x $x y $y every $interval ms"
     export function blink(x: number, y: number, interval: number): void {
         // Add code here
-    }
-
-    /**
-     * TODO: describe your function here
-     * @param value describe value here, eg: 5
-     */
-    //% block
-    export function fib(value: number): number {
-        return value <= 1 ? value : fib(value -1) + fib(value - 2);
+        let sprite = game.createSprite(x, y)
+        sprite.setBlink(interval)
+        sprite.blink()
     }
 }
