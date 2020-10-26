@@ -16,22 +16,10 @@ enum MyEnum1 {
     //% block="5"
     Four,
 }
-enum MyEnum2 {
-    //% block="1"
-    Zero,
-    //% block="2"
-    One,
-    //% block="3"
-    Two,
-    //% block="4"
-    Three,
-    //% block="5"
-    Four,
-}
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc10 icon=""
+//% weight=100 color=#ff6a00 icon="\uf1f9"
 namespace animations {
     /**
      * TODO: describe your function here
@@ -40,7 +28,7 @@ namespace animations {
      * @param e describe parameter here
      */
     //% block="blink x $x y $y every $interval ms"
-    //% interval.shadow=timePicker
+
     export function blink(x: MyEnum1, y: MyEnum1, interval: number): void {
         // Add code here
         let sprite = game.createSprite(x, y)
