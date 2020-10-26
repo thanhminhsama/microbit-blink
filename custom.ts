@@ -15,7 +15,7 @@ enum MyEnum {
  * Custom blocks
  */
 //% weight=100 color=#0fbc11 icon=""
-namespace custom {
+namespace animations {
     /**
      * TODO: describe your function here
      * @param n describe parameter here, eg: 5
@@ -23,7 +23,7 @@ namespace custom {
      * @param e describe parameter here
      */
     //% block="blink $n $s $e"
-    export function foo(n: number, s: string, e: MyEnum): void {
+    export function blink(x: number, y: number, interval: number): void {
         // Add code here
     }
 
