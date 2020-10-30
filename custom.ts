@@ -43,7 +43,7 @@ namespace animations {
     //% help=pins/digital-write-pin weight=29
     //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
     //% value.min=0 value.max=1
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
     //% name.fieldOptions.tooltips="false" name.fieldOptions.width="250"
     export function WritePin(name: DigitalPin, value: number): void {
         pins.digitalWritePin(name, value)
