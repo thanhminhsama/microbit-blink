@@ -15,7 +15,12 @@ enum MyEnum1 {
     //% block="5"
     Four,
 }
-
+enum MyEnum2 {
+    //% block="0"
+    Zero,
+    //% block="1"
+    One
+}
 /**
  * Custom blocks
  */
@@ -48,5 +53,18 @@ namespace animations {
     export function WritePin(name: DigitalPin, value: number): void {
         pins.digitalWritePin(name, value)
     }
-    
+    //% weight=100
+    //% block="nếu nút|%NAME|nhấn thì |%name| = $value"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=5
+    //% name.fieldOptions.tooltips="false" name.fieldOptions.width="250"
+    //% pin.fieldEditor="gridpicker" pin.fieldOptions.columns=5
+    //% pin.fieldOptions.tooltips="false" pin.fieldOptions.width="250"
+    //% parts="buttonpair"
+    export function Press_to_blink(pin: DigitalPin,name: DigitalPin, value: MyEnum2): void {
+        
+        if(pins.digitalReadPin(pin)){
+            pins.digitalWritePin(name, value)
+        }
+
+    }
 }
